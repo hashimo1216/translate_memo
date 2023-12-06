@@ -1,0 +1,10 @@
+#root {
+  max-width: 100%;
+  background-color: #fff;
+  margin: 0 auto;
+  text-align: center;
+}
+
+input, select {
+  outline: none;
+}
