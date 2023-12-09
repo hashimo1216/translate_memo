@@ -1,7 +1,7 @@
 build:
   docker:
-    translate-front: ./Dockerfile
-    translate-api: ./Dockerfile
+    front: ./front/Dockerfile
+    api: ./api/Dockerfile
 
 run: 
   tranlslate-front: npm run start
