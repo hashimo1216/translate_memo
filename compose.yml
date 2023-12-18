@@ -24,7 +24,7 @@ services:
       dockerfile: Dockerfile
     container_name: api
     volumes:
-       - ./api:/api
+      - ./api:/api
     tty: true
     ports:
      - 8080:8080
@@ -55,7 +55,6 @@ volumes:
       type: none
       device: ${PWD}/front/node_modules
       o: bind
-  api:
   db:
 
 networks:
