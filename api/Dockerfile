@@ -6,12 +6,4 @@ COPY . .
 
 RUN apk update && apk add git
 
-RUN go build -o translate-memo-api
-
-RUN chmod +x translate-memo-api
-
 EXPOSE 8080
-
-CMD ["./translate-memo-api"]
-
-

@@ -1,3 +1,5 @@
+setup:
+  addons:
 build:
   docker:
     front: ./front/Dockerfile

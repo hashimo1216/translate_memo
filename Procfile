@@ -1,1 +1,0 @@
-web: ./api/translate-memo-api
