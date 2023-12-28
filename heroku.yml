@@ -3,6 +3,8 @@ build:
     front: ./front/Dockerfile
     api: ./api/Dockerfile
 
+release:
+
 run: 
   tranlslate-front: npm run start
   tranlslate-api: api/translate-memo-api
