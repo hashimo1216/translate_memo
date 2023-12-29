@@ -4,5 +4,11 @@ build:
     api: ./api/Dockerfile
 
 run: 
-  tranlslate-front: npm run start
-  tranlslate-api: api/translate-memo-api
+  tranlslate-front: 
+    command:
+      - npm run start
+    image: 3e42cae14b1387d4dabaa386dc304a617d75548e5d28b755e65ed80b8e30758b:latest
+  tranlslate-api: 
+    command:
+      - api/translate-memo-api
+    image: 5fb538bed7e8ca27f28e2fac70c3a885da58cad5041a88db889d5806535a7cc5:latest
