@@ -4,11 +4,11 @@ build:
     api: ./api/Dockerfile
 
 run: 
-  - translate-front: 
+  translate-front: 
     command:
       - npm run start
     image: translatememo-front:latest
-  - translate-api: 
+  translate-api: 
     command:
       - api/translate-memo-api
     image: translatememo-api:latest
