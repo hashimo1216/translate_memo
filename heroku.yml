@@ -7,8 +7,8 @@ run:
   translate-front: 
     command:
       - npm run start
-    image: 3e42cae14b1387d4dabaa386dc304a617d75548e5d28b755e65ed80b8e30758b:latest
+    image: translatememo-front:latest
   translate-api: 
     command:
       - api/translate-memo-api
-    image: 5fb538bed7e8ca27f28e2fac70c3a885da58cad5041a88db889d5806535a7cc5:latest
+    image: translatememo-api:latest
