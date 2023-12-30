@@ -7,8 +7,8 @@ run:
   translate-front: 
     command:
       - npm run start
-    image: 4d5c5a3edadcbcbdc4b18d0f0b7ad831b20958f74c3015e5c668007a3e098dfb:latest
+    image: registry.heroku.com/translate-memo/front:latest
   translate-api: 
     command:
       - api/translate-memo-api
-    image: d2c452b1a77db3706b6cfaacf0a21c3d1cef4dd8fd953bbe4c08d6cd110091d1:latest
+    image: translatememo-api:latest
