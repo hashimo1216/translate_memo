@@ -6,7 +6,7 @@ build:
 run: 
   translate-front: 
     command:
-      - npm run start
+      - npm run dev
     image: front
   translate-api: 
     command:
