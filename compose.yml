@@ -25,9 +25,9 @@ services:
     container_name: api
     volumes:
       - ./api:/api
-    tty: true
     ports:
      - 8080:8080
+    tty: true
     depends_on:
       - db
     networks:
@@ -36,6 +36,7 @@ services:
   db:
     image: mysql:8.2.0
     container_name: db
+    tty: true
     ports: 
       - 3306:3306
     environment:
