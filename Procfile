@@ -1,2 +1,2 @@
-front: npm run preview
+front: npm start
 api: ./api/translate-memo-api
