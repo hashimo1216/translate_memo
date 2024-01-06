@@ -14,4 +14,4 @@ RUN chmod +x ./entrypoint.sh
 
 EXPOSE 8080
 
-CMD [ "./entrypoint.sh", "./translate_memo" ]
+CMD [ "./translate_memo" ]
