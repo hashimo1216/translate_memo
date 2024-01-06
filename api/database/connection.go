@@ -1,7 +1,6 @@
 package database
 
 import (
-	"fmt"
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
 	"os"
@@ -11,14 +10,12 @@ import (
 var DB *gorm.DB
 
 func Connect() {
-	dsn := fmt.Sprintf(
-		"%s:%s@tcp(db)/%s?charset=utf8mb4&parseTime=true",
-		os.Getenv("MYSQL_USER"),
-		os.Getenv("MYSQL_PASSWORD"),
-		os.Getenv("MYSQL_DATABASE"),
-	)
+	jawsdbURL := os.Getenv("JAWSDB_URL")
+	if jawsdbURL == "" {
+		panic("JAWSDB_URL environment variable not set")
+	}
 
-	connection, err := gorm.Open(mysql.Open(dsn), &gorm.Config{})
+	connection, err := gorm.Open(mysql.Open(jawsdbURL), &gorm.Config{})
 
 	if err != nil {
 		panic("Could not connect to the database")
