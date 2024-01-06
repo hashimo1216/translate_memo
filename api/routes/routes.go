@@ -3,6 +3,7 @@ package routes
 import (
 	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
+	"os"
 	"translate_memo/controllers"
 	"translate_memo/database"
 	"translate_memo/middleware"
@@ -14,7 +15,13 @@ func Setup() *gin.Engine {
 	config := cors.DefaultConfig()
 	config.AllowCredentials = true
 	config.AllowHeaders = []string{"Content-Type", "withCredentials"}
-	config.AllowOrigins = []string{"http://localhost:5173"}
+
+	if os.Getenv("ENVIRONMENT") == "production" {
+		config.AllowOrigins = []string{"https://translate-memo-5cf100b7d182.herokuapp.com"}
+	} else {
+		// Allow localhost for development
+		config.AllowOrigins = []string{"http://localhost:5173"}
+	}
 
 	r.Use(cors.New(config))
 
