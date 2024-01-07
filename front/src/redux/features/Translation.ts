@@ -5,7 +5,6 @@ import { DeeplLanguages } from "deepl";
 const initialState: TranslationState = {
   languages: [
     {key: "JA", language:'日本語', nationalFlag:'🇯🇵'},
-    {key: "KO", language:'韓国語', nationalFlag:'🇰🇷'},
     {key: "EN-US", language:'英語(USA)', nationalFlag:'🇺🇸'},
     {key: "ZH", language: '中国語', nationalFlag:'🇨🇳'},
     {key: "FR", language:'フランス語', nationalFlag:'🇫🇷'},

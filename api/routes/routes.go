@@ -15,13 +15,7 @@ func Setup() *gin.Engine {
 	config := cors.DefaultConfig()
 	config.AllowCredentials = true
 	config.AllowHeaders = []string{"Content-Type", "withCredentials"}
-
-	if os.Getenv("ENVIRONMENT") == "production" {
-		config.AllowOrigins = []string{"https://translate-memo-5cf100b7d182.herokuapp.com"}
-	} else {
-		// Allow localhost for development
-		config.AllowOrigins = []string{"http://localhost:5173"}
-	}
+	config.AllowOrigins = []string{"https://translate-memo-app.vercel.app"}
 
 	r.Use(cors.New(config))
 
