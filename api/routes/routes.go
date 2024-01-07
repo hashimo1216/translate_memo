@@ -3,7 +3,6 @@ package routes
 import (
 	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
-	"os"
 	"translate_memo/controllers"
 	"translate_memo/database"
 	"translate_memo/middleware"
