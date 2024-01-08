@@ -52,7 +52,6 @@ export default function Sidebar() {
         }
       } catch (err) {
         console.log(err);
-        // Handle error as needed
       }
     }
   };

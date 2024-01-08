@@ -24,7 +24,7 @@ export default function TranslateMemo() {
       }
     },)
     .catch((err) => {
-      if(err.status === 401) {
+      if(err) {
         dispatch(logout())
         navigate("/login")
       }

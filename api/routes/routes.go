@@ -13,7 +13,7 @@ func Setup() *gin.Engine {
 
 	config := cors.DefaultConfig()
 	config.AllowCredentials = true
-	config.AllowHeaders = []string{"Content-Type", "withCredentials"}
+	config.AllowHeaders = []string{"Content-Type"}
 	config.AllowOrigins = []string{"https://translate-memo-app.vercel.app"}
 
 	r.Use(cors.New(config))
