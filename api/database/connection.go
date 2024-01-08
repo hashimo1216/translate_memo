@@ -1,7 +1,8 @@
 package database
 
 import (
-	"gorm.io/driver/mysql"
+	"fmt"
+	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
 	"os"
 	"translate_memo/models"
@@ -10,12 +11,14 @@ import (
 var DB *gorm.DB
 
 func Connect() {
-	jawsdbURL := os.Getenv("JAWSDB_URL")
-	if jawsdbURL == "" {
-		panic("JAWSDB_URL environment variable not set")
-	}
+	dsn := fmt.Sprintf(
+		"host=%s user=%s password=%s dbname=translate_memo_db port=5432 sslmode=disable TimeZone=Asia/Shanghai",
+		os.Getenv("HOST_NAME"),
+		os.Getenv("USER_NAME"),
+		os.Getenv("PASSWORD"),
+	)
 
-	connection, err := gorm.Open(mysql.Open(jawsdbURL), &gorm.Config{})
+	connection, err := gorm.Open(postgres.Open(dsn), &gorm.Config{})
 
 	if err != nil {
 		panic("Could not connect to the database")
