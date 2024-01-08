@@ -3,7 +3,6 @@ package controller
 import (
 	"github.com/gin-gonic/gin"
 	"golang.org/x/crypto/bcrypt"
-	//"net/http"
 	"translate_memo/database"
 	"translate_memo/models"
 	"translate_memo/utils"
