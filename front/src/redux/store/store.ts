@@ -8,7 +8,6 @@ export const store = configureStore({
   reducer: {
     folder: foldersReducer,
     translation: translationReducer,
-    //memo: memosReducer,
     auth: authReducer,
   },
 })

@@ -40,7 +40,7 @@ func GetUserFolders(c *gin.Context) {
 		if folders[i].ID != 0 {
 			if err := DB.Model(&folders[i]).Association("Memos").Find(&folders[i].Memos); err != nil {
 				if err == gorm.ErrRecordNotFound {
-					folders[i].Memos = []models.Memo{} // Set an empty slice if no memos found
+					folders[i].Memos = []models.Memo{}
 				} else {
 					c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
 					return

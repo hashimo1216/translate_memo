@@ -19,13 +19,12 @@ export default function TranslateMemo() {
     .then((res) => {
       if (res.status === 200) {
         const folders = res.data.map(({ CreatedAt, UpdatedAt, DeletedAt, ...rest }: { CreatedAt: string; UpdatedAt: string; DeletedAt: string | null }) => rest)
-        console.log(folders)
         dispatch(setFolders(folders))
         dispatch(login())
       }
     },)
     .catch((err) => {
-      if(err) {
+      if(err.status === 401) {
         dispatch(logout())
         navigate("/login")
       }
