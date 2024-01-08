@@ -12,10 +12,11 @@ var DB *gorm.DB
 
 func Connect() {
 	dsn := fmt.Sprintf(
-		"host=%s user=%s password=%s dbname=translate_memo_db port=5432 sslmode=disable TimeZone=Asia/Shanghai",
+		"host=%s user=%s password=%s dbname=%s port=5432 sslmode=disable TimeZone=Asia/Shanghai",
 		os.Getenv("HOST_NAME"),
 		os.Getenv("USER_NAME"),
 		os.Getenv("PASSWORD"),
+		os.Getenv("DB_NAME"),
 	)
 
 	connection, err := gorm.Open(postgres.Open(dsn), &gorm.Config{})
