@@ -37,7 +37,7 @@ func Signup(c *gin.Context) {
 		c.JSON(500, gin.H{"error": "Could not signin"})
 	}
 
-	c.SetCookie("jwt", token, 900, "/", "translate-memo-api.onrender.com", false, true)
+	c.SetCookie("jwt", token, 900, "/", "translate-memo.onrender.com", false, true)
 }
 
 func Login(c *gin.Context) {
@@ -66,7 +66,7 @@ func Login(c *gin.Context) {
 		return
 	}
 
-	c.SetCookie("jwt", token, 900, "/", "translate-memo-api.onrender.com", false, true)
+	c.SetCookie("jwt", token, 900, "/", "translate-memo.onrender.com", false, true)
 
 	if err != nil {
 		c.JSON(500, gin.H{"message": "Failed to get user folders"})
@@ -77,6 +77,6 @@ func Login(c *gin.Context) {
 }
 
 func Logout(c *gin.Context) {
-	c.SetCookie("jwt", "", -3600, "/", "translate-memo-api.onrender.com", false, true)
+	c.SetCookie("jwt", "", -3600, "/", "translate-memo.onrender.com", false, true)
 	c.JSON(200, gin.H{"message": "logout"})
 }
