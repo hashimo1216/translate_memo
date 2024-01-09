@@ -10,5 +10,5 @@ func main() {
 	database.Connect()
 
 	r := routes.Setup()
-	r.Run(os.Getenv("PORT"))
+	r.Run()
 }
