@@ -14,7 +14,7 @@ func Setup() *gin.Engine {
 	config := cors.DefaultConfig()
 	config.AllowCredentials = true
 	config.AllowHeaders = []string{"Content-Type"}
-	config.AllowOrigins = []string{"https://translate-memo-web.onrender.com"}
+	config.AllowOrigins = []string{"https://translate-memo.onrender.com"}
 
 	r.Use(cors.New(config))
 
