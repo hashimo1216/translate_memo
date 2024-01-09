@@ -1,7 +1,6 @@
 package main
 
 import (
-	"os"
 	"translate_memo/database"
 	"translate_memo/routes"
 )
