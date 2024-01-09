@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const baseURL = 'https://translate-memo-api.onrender.com:10000'
+const baseURL = 'https://translate-memo-api.onrender.com'
 
 export default axios.create({
   baseURL,
