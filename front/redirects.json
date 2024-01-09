@@ -1,7 +1,0 @@
-{
-  "routes" : [
-    { "src": "/login", "dest": "/login", "status": 200 },
-    { "src": "/signup", "dest": "/signup", "status": 200 },
-    { "src": "translate_memo", "dest": "/translate_memo", "status": 200}
-  ]
-}
