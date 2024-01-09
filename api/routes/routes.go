@@ -18,6 +18,12 @@ func Setup() *gin.Engine {
 
 	r.Use(cors.New(config))
 
+	r.GET("/", func(c *gin.Context) {
+		c.JSON(200, gin.H{
+			"message": "Welcome to the API!",
+		})
+	})
+
 	r.POST("/api/signup", controller.Signup)
 	r.POST("/api/login", controller.Login)
 	r.POST("/api/logout", controller.Logout)
